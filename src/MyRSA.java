@@ -62,10 +62,10 @@ public class MyRSA {
         return new BigInteger(1, msg).modPow(publicKey, modulus);
     }
 
-    public String decrypt(String msg) {
+    public String decrypt(String msgBASE64) {
         byte[] decodeBASE64 = new byte[0];
         try {
-            decodeBASE64 = new BASE64Decoder().decodeBuffer(msg);
+            decodeBASE64 = new BASE64Decoder().decodeBuffer(msgBASE64);
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -77,4 +77,24 @@ public class MyRSA {
         return new BigInteger(msg).modPow(privateKey, modulus);
     }
 
+    public BigInteger getPublicKey() {
+        return publicKey;
+    }
+
+    public BigInteger getPrivateKey() {
+        return privateKey;
+    }
+
+    public BigInteger getModulus() {
+        return modulus;
+    }
+
+    @Override
+    public String toString() {
+        return "MyRSA{" +
+                "publicKey=" + publicKey +
+                ", privateKey=" + privateKey +
+                ", modulus=" + modulus +
+                '}';
+    }
 }
