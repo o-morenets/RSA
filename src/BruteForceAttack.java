@@ -9,7 +9,7 @@ public class BruteForceAttack {
         int N = 1024; //количество бит для генерации RSA ключей
         MyRSA myRsa = new MyRSA(N);
         System.out.println(myRsa);
-        System.out.println("=========================================================================================");
+        System.out.println("========================================================================================");
 
         // Атака перебором
         final BigInteger zero = BigInteger.ZERO;
