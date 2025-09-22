@@ -1,6 +1,6 @@
 
 /**
- * Created by MORA on 09.11.2014.
+ * Created by oleksii.morenets@gmail.com on 09.11.2014.
  */
 public class Main {
     public static void main(String[] args) {
